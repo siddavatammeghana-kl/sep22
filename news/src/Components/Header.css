@@ -1,0 +1,21 @@
+.site-header { border-bottom: 1px solid var(--border); background: var(--bg); }
+.header-inner { min-height: 78px; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text-h); font-family: Georgia, serif; font-size: 20px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.brand-mark { display: grid; width: 32px; height: 32px; place-items: center; color: #fff; background: #d45136; font-family: Georgia, serif; font-size: 22px; }
+.main-nav { display: flex; align-items: center; gap: 24px; }
+.main-nav a { color: var(--text); font-size: 14px; text-decoration: none; }
+.main-nav a:hover { color: var(--text-h); }
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.icon-button { display: grid; width: 38px; height: 38px; padding: 0; place-items: center; color: var(--text-h); background: transparent; border: 0; cursor: pointer; }
+.icon-button:hover { background: var(--accent-bg); }
+.subscribe-button { padding: 10px 16px; color: #fff; background: var(--text-h); border: 0; font-size: 13px; font-weight: 700; cursor: pointer; }
+.menu-button { display: none; }
+@media (max-width: 760px) {
+  .header-inner { min-height: 68px; padding: 0 18px; }
+  .main-nav { display: none; position: absolute; z-index: 2; top: 68px; right: 0; left: 0; padding: 18px; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); border-bottom: 1px solid var(--border); box-shadow: var(--shadow); }
+  .main-nav.is-open { display: flex; }
+  .main-nav a { padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .menu-button { display: grid; }
+  .subscribe-button { display: none; }
+  .brand { font-size: 17px; }
+}
